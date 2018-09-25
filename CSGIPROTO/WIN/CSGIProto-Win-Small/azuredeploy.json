@@ -56,7 +56,7 @@
     },
     "resources": [
         {
-            "name": "nic-[parameters('networkInterfaceName')]",
+            "name": "[parameters('networkInterfaceName')]",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2018-04-01",
             "location": "[parameters('location')]",
