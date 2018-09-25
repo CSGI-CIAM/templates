@@ -1,1 +1,70 @@
-test
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "networkInterfaceName": {
+            "value": "amecsgijira0001385"
+        },
+        "networkSecurityGroupId": {
+            "value": "/subscriptions/4d71365b-b378-4a10-9eb5-8e5e0f6c3eb4/resourceGroups/APP1-US-rg/providers/Microsoft.Network/networkSecurityGroups/Prod-VM-New-nsg"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/4d71365b-b378-4a10-9eb5-8e5e0f6c3eb4/resourceGroups/APP1-US-rg/providers/Microsoft.Network/virtualNetworks/APP1-US-rg-vnet"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualMachineName": {
+            "value": "AMECSGIJIRA0001"
+        },
+        "virtualMachineRG": {
+            "value": "RG-Jira-Dev"
+        },
+        "osDiskType": {
+            "value": "Standard_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "None",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "AMECSGIJIRA0001_DataDisk_0",
+                    "storageAccountType": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "AMECSGIJIRA0001_DataDisk_0",
+                    "diskSizeGB": 20,
+                    "sku": "Standard_LRS",
+                    "creationData": {
+                        "createOption": "empty"
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "adminuser"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "1rgdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/4d71365b-b378-4a10-9eb5-8e5e0f6c3eb4/resourceGroups/APP1-US-rg/providers/Microsoft.Storage/storageAccounts/1rgdiag"
+        }
+    }
+}
