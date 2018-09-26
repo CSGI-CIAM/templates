@@ -9,7 +9,7 @@
     },
     "virtualMachineName": {
       "type": "string",
-      "defaultValue": "AMECSGIJIRxxxx",
+      "defaultValue": "AMETSTIxxxxxxx",
       "minLength": 11,
       "maxLength": 15
     },
@@ -28,17 +28,17 @@
     }
   },
   "variables": {
-    "nsgId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/networkSecurityGroups/nsg-win-dev-test",
+    "nsgId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/RG-CSGIPROTO-Infrastructure/providers/Microsoft.Network/networkSecurityGroups/nsg-win-csgiproto",
     "vnetId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev",
-    "subnetRef": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CorpIT-Dev",
+    "subnetRef": "//subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CSGIPROTO",
     "networkInterfaceName": "[concat('nic','-',parameters('virtualMachineName'))]",
     "adminUsername": "adminuser",
     "diagnosticsStorageAccountName": "stracctdiag",
-    "diagnosticsStorageAccountId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Storage/storageAccounts/stracctdiag",
+    "diagnosticsStorageAccountId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/RG-CSGIPROTO-Infrastructure/providers/Microsoft.Storage/storageAccounts/stracctcsgiprotoinfra",
     "dataDisksCount": 1,
     "OSDiskName": "[concat(toLower(parameters('virtualMachineName')),'-OSDisk')]",
     "dataDiskSize": 20
-  },
+      },
   "resources": [
     {
       "name": "[variables('networkInterfaceName')]",
