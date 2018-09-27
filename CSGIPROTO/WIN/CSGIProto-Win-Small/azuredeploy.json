@@ -27,18 +27,6 @@
       "type": "secureString"
     }
   },
-  "variables": {
-    "nsgId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/RG-CSGIPROTO-Infrastructure/providers/Microsoft.Network/networkSecurityGroups/nsg-win-csgiproto",
-    "vnetId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev",
-    "subnetRef": "//subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CSGIPROTO",
-    "networkInterfaceName": "[concat('nic','-',parameters('virtualMachineName'))]",
-    "adminUsername": "adminuser",
-    "diagnosticsStorageAccountName": "stracctdiag",
-    "diagnosticsStorageAccountId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Storage/storageAccounts/stracctdiag",
-    "dataDisksCount": 1,
-    "OSDiskName": "[concat(toLower(parameters('virtualMachineName')),'-OSDisk')]",
-    "dataDiskSize": 20
-  },
   "resources": [
     {
       "name": "[variables('networkInterfaceName')]",
@@ -57,7 +45,7 @@
               "privateIPAllocationMethod": "Dynamic"
             }
           }
-       ],
+        ],
         "networkSecurityGroup": {
           "id": "[variables('nsgId')]"
         }
@@ -134,5 +122,18 @@
       },
       "tags": {}
     }
+  ],
+  "variables": {
+    "nsgId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/RG-CSGIPROTO-Infrastructure/providers/Microsoft.Network/networkSecurityGroups/nsg-win-csgiproto",
+    "vnetId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev",
+    "subnetRef": "//subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CSGIPROTO",
+    "networkInterfaceName": "[concat('nic','-',parameters('virtualMachineName'))]",
+    "adminUsername": "adminuser",
+    "diagnosticsStorageAccountName": "stracctdiag",
+    "diagnosticsStorageAccountId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Storage/storageAccounts/stracctdiag",
+    "dataDisksCount": 1,
+    "OSDiskName": "[concat(toLower(parameters('virtualMachineName')),'-OSDisk')]",
+    "dataDiskSize": 20
+  }
   ]
 }
