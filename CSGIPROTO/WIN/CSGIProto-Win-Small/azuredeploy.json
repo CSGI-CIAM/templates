@@ -135,20 +135,6 @@
       "tags": {}
     }
   ]
-},
-
-  
-        "protectedSettings": {
-
-          "Password": "[parameters('domainPassword')]"
-
-        }
-
-      }
-
-    }
-
-  ]
-
 }
+
 
