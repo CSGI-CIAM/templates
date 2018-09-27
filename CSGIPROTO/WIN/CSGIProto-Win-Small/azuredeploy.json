@@ -62,7 +62,7 @@
 
     "vnetId": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev",
 
-    "subnetRef": "//subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CSGIPROTO",
+    "subnetRef": "/subscriptions/bb648dae-ef76-4183-af69-95cf59c36dc4/resourceGroups/ARG-CorpITDev/providers/Microsoft.Network/virtualNetworks/CorpIT-Dev/subnets/CSGIPROTO",
 
     "networkInterfaceName": "[concat('nic','-',parameters('virtualMachineName'))]",
 
